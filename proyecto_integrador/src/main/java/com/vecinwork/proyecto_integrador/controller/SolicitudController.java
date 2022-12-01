@@ -1,4 +1,4 @@
-package com.vecinwork.proyecto_integrador.controllers;
+package com.vecinwork.proyecto_integrador.controller;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.vecinwork.proyecto_integrador.models.Solicitud;
+import com.vecinwork.proyecto_integrador.model.Solicitud;
 import com.vecinwork.proyecto_integrador.service.SolicitudService;
 
 @RestController
