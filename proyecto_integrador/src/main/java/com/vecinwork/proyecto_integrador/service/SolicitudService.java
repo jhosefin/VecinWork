@@ -6,38 +6,34 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Service;
 
-import com.vecinwork.proyecto_integrador.models.Solicitud;
-import com.vecinwork.proyecto_integrador.repository.SolicitudRepositoy;
+import com.vecinwork.proyecto_integrador.model.Solicitud;
+import com.vecinwork.proyecto_integrador.repository.SolicitudRepository;
 
 @Service
 @Transactional
 public class SolicitudService {
 
-    private SolicitudRepositoy solicitudRepositoy;
+    private SolicitudRepository solicitudRepository;
 
-    public SolicitudService(SolicitudRepositoy solicitudRepositoy){
-        this.solicitudRepositoy = solicitudRepositoy;
+    public SolicitudService(SolicitudRepository solicitudRepository){
+        this.solicitudRepository = solicitudRepository;
     }
 
     public void saveSolicitud(Solicitud solicitud){
-        solicitudRepositoy.save(solicitud); 
+        solicitudRepository.save(solicitud); 
     }
 
     public void updateSolicitud(Solicitud solicitud){
-        solicitudRepositoy.save(solicitud);
+        solicitudRepository.save(solicitud);
     }
 
     public List<Solicitud> findAll(){
-        return solicitudRepositoy.findAll();
+        return solicitudRepository.findAll();
     }
 
     public void eliminarSolicitud(Integer id){
-        solicitudRepositoy.deleteById(id);
+        solicitudRepository.deleteById(id);
     }
 
-
-    public List<Solicitud> buscarPorId(Integer id){//el nombre en amarillo es el que va en el controlador
-        return solicitudRepositoy.findAllSolicitud(id);
-    }
     
 }

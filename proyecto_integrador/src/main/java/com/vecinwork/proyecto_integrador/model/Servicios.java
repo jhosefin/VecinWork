@@ -1,11 +1,14 @@
 package com.vecinwork.proyecto_integrador.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-import antlr.collections.List;
 
 @Entity(name="Servicios")
 
@@ -17,7 +20,7 @@ public class Servicios {
     private String Subrama;
 
     @OneToMany(mappedBy = "servicios ", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Publicaciones> publicaciones;
+    private List<Publicacion> publicacion;
 
     public Servicios() {
     }
@@ -52,12 +55,12 @@ public class Servicios {
         Subrama = subrama;
     }
 
-    public List<Publicaciones> getPublicaciones() {
-        return publicaciones;
+    public List<Publicacion> getPublicacion() {
+        return publicacion;
     }
 
-    public void setPublicaciones(List<Publicaciones> publicaciones) {
-        this.publicaciones = publicaciones;
+    public void setPublicacion(List<Publicacion> publicacion) {
+        this.publicacion = publicacion;
     }
 
         

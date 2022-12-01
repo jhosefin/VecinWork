@@ -1,19 +1,20 @@
 package com.vecinwork.proyecto_integrador.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.vecinwork.proyecto_integrador.model.Publicacion;
 import com.vecinwork.proyecto_integrador.service.PublicacionService;
 
 @CrossOrigin("*")
-@Controller
+@RestController
 public class PublicacionController {
 
     private PublicacionService publicacionService;
@@ -22,12 +23,32 @@ public class PublicacionController {
         this.publicacionService = publicacionService;
     }
 
-    @GetMapping("/publicacion/{id}")
+/*     @GetMapping("/publicacion/{id}")
     public Publicacion getPublicacion(@PathVariable Integer id){
         return publicacionService.getPublicacion(id);
+    } */
+    @PostMapping(value = ("/Publicacion/save"), consumes = {"application/json"})
+
+    public void guardarPublicacion(@RequestBody Publicacion publicacion){
+        publicacionService.savePublicacion(publicacion);
     }
 
-    @PostMapping("/titulo")
+    @PostMapping("/Publicacion/update")
+    public void actualizarPublicacion(@RequestBody Publicacion publicacion){
+        publicacionService.updatePublicacion(publicacion);
+    }
+
+    @GetMapping("/Publicacion/findAll")
+    public List<Publicacion> todasLasPublicacion(){
+        return publicacionService.findAll();
+    }
+
+    @GetMapping("/deletePublicacion/{id}")
+    public void deletePublicacion(@PathVariable Integer id){
+        publicacionService.deletePublicacion(id);
+    }
+
+/*     @PostMapping("/titulo")
     public void newTitulo(@RequestBody Publicacion titulo){
         return publicacionService.save(titulo);
     }
@@ -49,13 +70,7 @@ public class PublicacionController {
 
     @GetMapping("/publicacion/{activo}")
     public Publicacion getEstado(@PathVariable Boolean activo){
-        return publicacionService.getEstado(activo);
-    }
+        return publicacionService.getEstado(activo); 
+    }*/
 
-    @DeleteMapping("/deletePublicacion/{id}")
-    public void deletePublicacion(@PathVariable Integer id){
-        publicacionService.deletePublicacion(id);
-    }
-
-    
 }
