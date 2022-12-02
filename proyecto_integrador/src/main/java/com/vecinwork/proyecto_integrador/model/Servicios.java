@@ -9,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 
 @Entity(name="Servicios")
 
@@ -19,16 +21,18 @@ public class Servicios {
     private String rama;
     private String Subrama;
 
-    @OneToMany(mappedBy = "servicios ", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "servicios", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Publicacion> publicacion;
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}) 
 
     public Servicios() {
     }
 
-    public Servicios(Integer id, String rama, String subrama) {
+    public Servicios(Integer id, String rama, String subrama, List<Publicacion> publicacion) {
         this.id = id;
         this.rama = rama;
         Subrama = subrama;
+        this.publicacion = publicacion;
     }
 
     public Integer getId() {
@@ -62,6 +66,9 @@ public class Servicios {
     public void setPublicacion(List<Publicacion> publicacion) {
         this.publicacion = publicacion;
     }
+
+    
+
 
         
     }
