@@ -23,10 +23,6 @@ public class PublicacionController {
         this.publicacionService = publicacionService;
     }
 
-/*     @GetMapping("/publicacion/{id}")
-    public Publicacion getPublicacion(@PathVariable Integer id){
-        return publicacionService.getPublicacion(id);
-    } */
     @PostMapping(value = ("/Publicacion/save"), consumes = {"application/json"})
 
     public void guardarPublicacion(@RequestBody Publicacion publicacion){
@@ -43,34 +39,10 @@ public class PublicacionController {
         return publicacionService.findAll();
     }
 
-    @GetMapping("/deletePublicacion/{id}")
+    @GetMapping("/Publicacion/eliminarPublicacion/{id}")
     public void deletePublicacion(@PathVariable Integer id){
-        publicacionService.deletePublicacion(id);
+        publicacionService.eliminarPublicacion(id);
     }
 
-/*     @PostMapping("/titulo")
-    public void newTitulo(@RequestBody Publicacion titulo){
-        return publicacionService.save(titulo);
-    }
-
-    @PostMapping("/descripcion")
-    public void newDescripcion(@RequestBody Publicacion descripcion){
-        return publicacionService.save(descripcion);
-    }
-
-    @PostMapping("/precio")
-    public void newPrecio(@RequestBody Publicacion precio){
-        return publicacionService.save(precio);
-    }
-
-    @PostMapping("/fecha")
-    public void newFecha(@RequestBody Publicacion fecha){
-        return publicacionService.save(fecha);
-    }
-
-    @GetMapping("/publicacion/{activo}")
-    public Publicacion getEstado(@PathVariable Boolean activo){
-        return publicacionService.getEstado(activo); 
-    }*/
 
 }

@@ -4,9 +4,9 @@ import com.vecinwork.proyecto_integrador.model.Usuario;
 
 public interface UsuarioService {
     
-    Usuario getUser(Integer id);
+    Usuario getUsuario(Integer id);
 
-    Usuario save (Usuario user);
+    Usuario save (Usuario usuario);
 
     void delete (Integer id);
 

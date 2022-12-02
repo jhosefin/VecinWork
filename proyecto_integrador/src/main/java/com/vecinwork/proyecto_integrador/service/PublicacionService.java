@@ -32,32 +32,9 @@ public class PublicacionService {
         return publicacionRepository.findAll();
     } 
 
-    public void deletePublicacion(Integer id){
+    public void eliminarPublicacion(Integer id){
         publicacionRepository.deleteById(id);
     }
-/*     public Publicacion getPublicacion(Integer id) {
-        publicacionRepository.findById(id);
-    }
-
-    public void newTitulo(Publicacion id) {
-        publicacionRepository.save(id);
-    }
-
-    public void newDescripcion(Publicacion id) {
-        publicacionRepository.save(id);
-    }
-    
-    public void newPrecio(Publicacion id) {
-        publicacionRepository.save(id);
-    }
-
-    public void newUser(Publicacion id) {
-        publicacionRepository.save(id);
-    }
-
-    public void deletePublicacion(Integer id) {
-        publicacionRepository.deleteById(id);
-    } */
 
 
 }
