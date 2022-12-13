@@ -1,23 +1,25 @@
 package com.vecinwork.proyecto_integrador.model;
 
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@Entity(name = "Publicacion")
+@Entity(name = "publicacion")
 public class Publicacion {
     
 @Id
 @GeneratedValue
 
-private int id;
+private int publicacion_id;
 private String titulo;
 private int precio;
 private String descripcion;
@@ -26,29 +28,26 @@ private Date fecha;
 
 @ManyToOne(fetch = FetchType.LAZY)
 @JoinColumn(name = "usuario_id")
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 
 private Usuario usuario; 
 
 
 @ManyToOne(fetch = FetchType.LAZY)
 @JoinColumn(name = "servicios_id")
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 
 private Servicios servicios;
 
-@ManyToOne(fetch = FetchType.LAZY)
-@JoinColumn(name = "solicitud_id")
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}) 
-
-private Solicitud solicitud;
+@OneToMany(mappedBy = "publicacion", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+private List<Solicitud> solicitud;
 
 public Publicacion() {
 }
 
-public Publicacion(int id, String titulo, int precio, String descripcion, boolean activo, Date fecha, Usuario usuario,
-        Servicios servicios, Solicitud solicitud) {
-    this.id = id;
+
+
+public Publicacion(int publicacion_id, String titulo, int precio, String descripcion, boolean activo, Date fecha,
+        Usuario usuario, Servicios servicios, List<Solicitud> solicitud) {
+    this.publicacion_id = publicacion_id;
     this.titulo = titulo;
     this.precio = precio;
     this.descripcion = descripcion;
@@ -59,12 +58,13 @@ public Publicacion(int id, String titulo, int precio, String descripcion, boolea
     this.solicitud = solicitud;
 }
 
-public int getId() {
-    return id;
+
+public int getPublicacion_id() {
+    return publicacion_id;
 }
 
-public void setId(int id) {
-    this.id = id;
+public void setPublicacion_id(int publicacion_id) {
+    this.publicacion_id = publicacion_id;
 }
 
 public String getTitulo() {
@@ -123,13 +123,19 @@ public void setServicios(Servicios servicios) {
     this.servicios = servicios;
 }
 
-public Solicitud getSolicitud() {
+
+
+public List<Solicitud> getSolicitud() {
     return solicitud;
 }
 
-public void setSolicitud(Solicitud solicitud) {
+
+
+public void setSolicitud(List<Solicitud> solicitud) {
     this.solicitud = solicitud;
 }
+
+
 
 
 

@@ -9,63 +9,54 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 
-@Entity(name="Servicios")
+@Entity(name="servicios")
 
 public class Servicios {
     @Id
     @GeneratedValue
-    private Integer id;
-    private String rama;
-    private String Subrama;
+    private Integer servicios_id;
+    private String tipoDeServicio;
+    private String Descripccion;
 
     @OneToMany(mappedBy = "servicios", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Publicacion> publicacion;
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}) 
 
     public Servicios() {
     }
-
-    public Servicios(Integer id, String rama, String subrama, List<Publicacion> publicacion) {
-        this.id = id;
-        this.rama = rama;
-        Subrama = subrama;
+    public Servicios(Integer servicios_id, String tipoDeServicio, String descripccion, List<Publicacion> publicacion) {
+        this.servicios_id = servicios_id;
+        this.tipoDeServicio = tipoDeServicio;
+        Descripccion = descripccion;
         this.publicacion = publicacion;
     }
-
-    public Integer getId() {
-        return id;
+    public Integer getServicios_id() {
+        return servicios_id;
     }
-
-    public void setId(Integer id) {
-        this.id = id;
+    public void setServicios_id(Integer servicios_id) {
+        this.servicios_id = servicios_id;
     }
-
-    public String getRama() {
-        return rama;
+    public String getTipoDeServicio() {
+        return tipoDeServicio;
     }
-
-    public void setRama(String rama) {
-        this.rama = rama;
+    public void setTipoDeServicio(String tipoDeServicio) {
+        this.tipoDeServicio = tipoDeServicio;
     }
-
-    public String getSubrama() {
-        return Subrama;
+    public String getDescripccion() {
+        return Descripccion;
     }
-
-    public void setSubrama(String subrama) {
-        Subrama = subrama;
+    public void setDescripccion(String descripccion) {
+        Descripccion = descripccion;
     }
-
     public List<Publicacion> getPublicacion() {
         return publicacion;
     }
-
     public void setPublicacion(List<Publicacion> publicacion) {
         this.publicacion = publicacion;
     }
+
+
 
     
 

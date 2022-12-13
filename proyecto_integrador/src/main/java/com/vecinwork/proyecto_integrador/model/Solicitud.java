@@ -1,70 +1,74 @@
 package com.vecinwork.proyecto_integrador.model;
 
-import java.util.List;
+import java.util.Date;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-/* import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne; */
-import javax.persistence.OneToMany;
-
-//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;  
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 
-@Entity(name = "Solicitud")
+
+
+@Entity(name = "solicitud")
 public class Solicitud {
     @Id
     @GeneratedValue
 
-    private int id;
+    private int solicitud_id;
+    private Boolean aceptada;
+    private Date fecha;
 
 
-/*     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "usuario_id")
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "publicacion_id")
+    
+    private Publicacion publicacion;
 
-    private Usuario usuario; */
-
-    @OneToMany(mappedBy = "solicitud", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Publicacion> publicacion;
 
     public Solicitud() {
     }
 
-    public Solicitud(int id, /*Usuario usuario,*/ List<Publicacion> publicacion) {
-        this.id = id;
-  /*       this.usuario = usuario; */
+    public Solicitud(int solicitud_id, Boolean aceptada, Date fecha, Publicacion publicacion, Usuario usuario) {
+        this.solicitud_id = solicitud_id;
+        this.aceptada = aceptada;
+        this.fecha = fecha;
         this.publicacion = publicacion;
     }
 
-    public int getId() {
-        return id;
+    public int getSolicitud_id() {
+        return solicitud_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setSolicitud_id(int solicitud_id) {
+        this.solicitud_id = solicitud_id;
     }
 
-/*     public Usuario getUsuario() {
-        return usuario;
+    public Boolean getAceptada() {
+        return aceptada;
     }
 
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    } */
+    public void setAceptada(Boolean aceptada) {
+        this.aceptada = aceptada;
+    }
 
-    public List<Publicacion> getPublicacion() {
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
+    public Publicacion getPublicacion() {
         return publicacion;
     }
 
-    public void setPublicacion(List<Publicacion> publicacion) {
+    public void setPublicacion(Publicacion publicacion) {
         this.publicacion = publicacion;
-    } 
-
-    
+    }
 
     
 }

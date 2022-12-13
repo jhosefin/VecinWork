@@ -1,0 +1,13 @@
+.container{
+    aspect-ratio:16/9;
+background-color: aqua;
+margin-top: 50px;
+margin-bottom: auto;
+padding-top: 20px;
+}
+
+.tarjetas{
+    display: flex;
+    justify-content: space-between;
+}
+
