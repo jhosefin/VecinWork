@@ -1,5 +1,7 @@
+/* estilos de principal */
+
 .container{
-    aspect-ratio:16/9;
+aspect-ratio:16/9;
 background-color: aqua;
 margin-top: 50px;
 margin-bottom: auto;
@@ -11,3 +13,97 @@ padding-top: 20px;
     justify-content: space-between;
 }
 
+#desktop-input{
+    width: 400px;
+
+}
+
+#button-addon2{
+    background-color: #F19F23;
+}
+
+.btn{
+    background-color: white;
+
+}
+.letra{
+    color: #F19F23;
+}
+.letra2{
+    color: white;
+}
+
+/* estilos del navbar */
+.navbar{
+    background-color: #F19F23;
+
+}
+
+#BotonesNabvar{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* estilos del chat */
+
+#contenedorChat{
+    background-color: rgb(238, 236, 233);
+
+}
+
+.table{
+    width: 500px;
+}
+.botonSolicita{
+    background-color: #F19F23;
+  
+}
+#chatear{
+    width: 500px;
+    height: 300px;
+}
+
+
+.accordion-button{
+    color:#F19F23;
+    background-color:rgb(238, 236, 233) ;
+}
+
+.accordion-item{
+ border-color: #F19F23;
+}
+.accordion-item{
+    background-color:rgb(238, 236, 233) ;
+}
+
+.interesar{
+    background-color: white;
+}
+.tarjeta{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* estilos del footer */
+
+#footer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: auto;
+    background-color: rgb(230, 230, 230);
+    height: 150px;
+    align-items: center;
+}
+
+.logovecin{
+    width: 100px;
+    height: 100px;
+}
+
+.list-group {
+    height: 20px;
+}
+small {
+    font-size: 0.7em;
+}

@@ -1,13 +1,15 @@
 import React from "react";
-import naturaleza from "./img/naturaleza.jpg";
-import leon from "./img/leon.jpg";
-import carro from "./img/carro.jpg";
 import "./css/style.css";
 import perfil from "./img/perfil.png";
+import solicita from "./img/solicita.png";
+import contactate from "./img/contactate.png";
+import evalua from "./img/evalua.png";
+import Group9 from "./img/Group9.png";
+import Group10 from "./img/Group10.png";
 
 const PrincipalComponent = () => {
   return (
-    <div class="container">
+    <div class="container-fluid">
       <div
         id="carouselExampleIndicators"
         class="carousel slide"
@@ -37,13 +39,13 @@ const PrincipalComponent = () => {
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src={naturaleza} class="d-block w-100" alt="naturaleza"></img>
+            <img src={Group10} class="d-block w-100 " alt="banner1"></img>
           </div>
           <div class="carousel-item">
-            <img src={carro} class="d-block w-100" alt="carro"></img>
+            <img src={Group9} class="d-block w-100" alt="banner2"></img>
           </div>
           <div class="carousel-item">
-            <img src={leon} class="d-block w-100" alt="leon"></img>
+            <img src={Group9} class="d-block w-100" alt="banner3"></img>
           </div>
         </div>
         <button
@@ -65,31 +67,34 @@ const PrincipalComponent = () => {
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+      <br   />
       <div class="tarjetas">
+        <br />
       <div class="card row align-items-start" style={{width: '18rem'}}>
-  <img src="..." class="card-img-top" alt="..."></img>
+  <img src={perfil} class="card-img-top" alt="..."></img>
   <div class="card-body">
     <p class="card-text">Crear perfil.</p>
   </div>
 </div>
 <div class="card row align-items-center" style={{width: '18rem'}}>
-  <img src="..." class="card-img-top" alt="..."></img>
+  <img src={solicita} class="card-img-top" alt="..."></img>
   <div class="card-body">
     <p class="card-text">Solicita o publica.</p>
   </div>
 </div>
 <div class="card row align-items-center" style={{width: '18rem'}}>
-  <img src="..." class="card-img-top" alt="..."></img>
+  <img src={contactate} class="card-img-top" alt="..."></img>
   <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text">Contactate.</p>
   </div>
 </div>
 <div class="card row align-items-center" style={{width: '18rem'}}>
-  <img src="..." class="card-img-top" alt="..."></img>
+  <img src={evalua} class="card-img-top" alt="..."></img>
   <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text">Evalua.</p>
   </div>
 </div>
+<br />
 </div>
     </div>
   );
