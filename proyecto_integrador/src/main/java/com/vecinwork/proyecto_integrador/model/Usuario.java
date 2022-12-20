@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.persistence.*;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 //import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity(name="usuario")
@@ -16,6 +18,7 @@ public class Usuario {
     private String contrasenia;
     private String nombre;
     private String apellidos;
+    @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date fechaNacimiento;
     @Column(name="email",unique = true)
     private String correo;
@@ -24,6 +27,7 @@ public class Usuario {
     private String region;
     private String comuna;
     private String direccion;
+    private String numDocumento;
 
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Publicacion> publicacion;
@@ -33,7 +37,7 @@ public class Usuario {
 
     public Usuario(int usuario_id, String contrasenia, String nombre, String apellidos, Date fechaNacimiento,
             String correo, int numTelefonico, String region, String comuna, String direccion,
-            List<Publicacion> publicacion, List<Solicitud> solicitud) {
+            List<Publicacion> publicacion, List<Solicitud> solicitud, String numDocumento) {
         this.usuario_id = usuario_id;
         this.contrasenia = contrasenia;
         this.nombre = nombre;
@@ -45,6 +49,7 @@ public class Usuario {
         this.comuna = comuna;
         this.direccion = direccion;
         this.publicacion = publicacion;
+        this.numDocumento = numDocumento;
     }
 
     public int getUsuario_id() {
@@ -135,6 +140,12 @@ public class Usuario {
         this.publicacion = publicacion;
     }
 
-    
+    public String getNumDocumento() {
+        return numDocumento;
+    }
+
+    public void setNumDocumento(String numDocumento) {
+        this.numDocumento = numDocumento;
+    }
 
 }
