@@ -10,6 +10,7 @@ const Homepage = () => {
             <NavbarComponent/><DropdownComponent infoBoton={'Ir a login'} handleOnClick={handleOnClick}/>
             <PrincipalComponent/>
             <FooterComponent/>
+            
 
         </div>
     )
