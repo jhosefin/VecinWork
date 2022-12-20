@@ -7,6 +7,9 @@ const Homepage = () => {
     const handleOnClick = useCallback(()=> navigate("/Usuario",{}, [navigate]))
     return(
         <div>
+            <NavbarComponent/><DropdownComponent infoBoton={'Ir a login'} handleOnClick={handleOnClick}/>
+            <PrincipalComponent/>
+            <FooterComponent/>
             
 
         </div>
