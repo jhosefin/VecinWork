@@ -3,7 +3,6 @@ import naturaleza from "./img/naturaleza.jpg";
 import leon from "./img/leon.jpg";
 import carro from "./img/carro.jpg";
 import "./css/style.css";
-import perfil from "./img/perfil.png";
 
 const PrincipalComponent = () => {
   return (
