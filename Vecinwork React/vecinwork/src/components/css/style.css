@@ -1,4 +1,4 @@
-.container{
+/* .container{
     aspect-ratio:16/9;
 background-color: aqua;
 margin-top: 50px;
@@ -9,5 +9,93 @@ padding-top: 20px;
 .tarjetas{
     display: flex;
     justify-content: space-between;
+}
+ */
+
+
+/* IngresoUsuario.js */
+
+#tituloBienvenida{
+    text-align: center;
+}
+
+#containerIngresoUsuario{
+   border-style:groove;
+   border-width:1px;
+    width: 550px;
+    border-radius: 15px;
+}
+
+
+ 
+#exampleInputEmail1{
+    font-size: smaller;
+}
+
+#exampleInputPassword1{
+    font-size: smaller;
+}
+
+#tituloOlvidasteContrasenia{
+    margin-top: 20px;
+    font-size: small;
+    text-align: center;
+}
+
+#tituloSinCuenta{
+    font-size: small;
+}
+
+#botonIngresoUsuario{
+    color: white    ;
+}
+
+
+#divBotonIngresoUsuario2{
+    border-style:solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: rgb(241,159,35);
+}
+#botonIngresoUsuario2{
+    color: rgb(241,159,35);
+   
+}
+
+.form-control{
+    background-color: rgb(241,244,255);
+}
+
+a{
+    color: rgb(241,159,35);
+}
+
+#mdiGoogle{
+    width: 17px;
+    height: 17px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+
+
+/* FormularioRegistro.js */
+
+#tituloTerminosCondiciones{
+    font-size: smaller;
+}
+
+#tituloIniciarSesion{
+    font-size: smaller;
+}
+
+#containerFormularioRegistro{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 15px;
+}
+
+#botonRegistrate{
+    color: white;
 }
 

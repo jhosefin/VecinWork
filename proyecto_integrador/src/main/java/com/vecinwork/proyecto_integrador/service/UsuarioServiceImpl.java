@@ -36,4 +36,9 @@ public class UsuarioServiceImpl implements UsuarioService{
     public List<Usuario> findAllRegionUsuario(String region){
         return usuarioRepository.findAllRegion(region);
     }
+
+    @Override
+    public List<Usuario> getAllUsers(){
+        return usuarioRepository.findAll();
+    }
 }
