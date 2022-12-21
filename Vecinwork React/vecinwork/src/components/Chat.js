@@ -4,27 +4,57 @@ import lavadora from "./img/lavadora.png";
 import electricista from "./img/electricista.jpg";
 import plomero from "./img/plomero.jpg";
 import cuidado from "./img/cuidado.jpg";
+import publi1 from "./img/publi1.jpg";
+import publi2 from "./img/publi2.jpg";
+import publi3 from "./img/publi3.jpg";
+import publi4 from "./img/publi4.jpg";
 
 const ChatComponent = () => {
   return (
     <div id="contenedorChat" class="container-xxl">
       <div class="container-xl">
-      <h1>Jose Ramirez</h1>
+      <h1>Arturo Petrolino</h1>
       <h2>Reparación de lavadora</h2>
-      <img src={lavadora} alt="---" class=" imagenChat " />
+
+      <div class="container" id="galeriaPublicacion2">
+      <div class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src={publi1} id="imgpubli" class=" " alt="..."/>
+    </div>
+    <div class="carousel-item">
+      <img src={publi2} id="imgpubli" class="d-block " alt="..."/>
+    </div>
+    <div class="carousel-item">
+      <img src={publi3} id="imgpubli" class="d-block " alt="..."/>
+    </div>
+    <div class="carousel-item">
+      <img src={publi4} id="imgpubli" class="d-block " alt="..."/>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">Dirección</th>
+            <th scope="col">Ubicación</th>
             <th scope="col">Precio</th>
             <th scope="col">Disponibilidad</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Peñaflor</td>
-            <td>$55.000</td>
-            <td>Lunes a Sabado de 09:00 a 20:00</td>
+            <td>Santiago, Chile</td>
+            <td>$50.000</td>
+            <td>Lunes a viernes de 09:00 a 19:00</td>
           </tr>
         </tbody>
       </table>
@@ -80,7 +110,9 @@ const ChatComponent = () => {
       <textarea id="chatear" placeholder="Hola Ingresa tu mensaje">
       </textarea>
       <br></br>
-      <button type="submit" class="botonEnviar btn"><div class="letra">Enviar</div></button>
+      <div id="liveAlertPlaceholder"></div>
+<button type="button" class="btn btn-primary" id="liveAlertBtn">Enviar</button>
+{/*       <button type="submit" class="botonEnviar btn"><div class="letra">Enviar</div></button> */}
       </div>
 <br></br>
 <div class="interesar">

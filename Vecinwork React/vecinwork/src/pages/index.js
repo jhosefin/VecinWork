@@ -4,4 +4,5 @@ import ChatUsuariopage from "./ChatUsuario";
 import CategoriasDestacadasPage from "./CategoriasDestacadas";
 import PublicacionPage from "./Publicacion";
 import Usuario from "./Usuario";
-export {Homepage , Conocenospage, ChatUsuariopage, CategoriasDestacadasPage, PublicacionPage, Usuario};
+import InicioSesionPage from "./InicioSesion";
+export {Homepage , Conocenospage, ChatUsuariopage, CategoriasDestacadasPage, PublicacionPage, Usuario, InicioSesionPage};

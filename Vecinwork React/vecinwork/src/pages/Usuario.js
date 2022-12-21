@@ -1,6 +1,6 @@
 import React, {useState,useEffect,useCallback} from "react";
 import { useNavigate } from "react-router-dom";
-import { FormularioRegistro, TablaRegistro } from "../components";
+import { FormularioRegistro, TablaRegistro, FooterComponent, NavbarComponent } from "../components";
 import {addUser,editUser,getAllUsers,deleteUser} from '../services/User';
 
 
@@ -74,7 +74,8 @@ const Usuario = () => {
         //en esta linea agregamos usuario a bbdd
         const usuarioBD = await addUser(usuarioAgregado);
         //aqui haremos que la tabla se actualice
-        getUsers();
+        window.location.href = "/Destacados";
+  /*       getUsers(); */
     }
 
     const userEdit = async (usuarioEditado) => {
@@ -88,11 +89,14 @@ const Usuario = () => {
     }
 
     return (
+        <div>
+        <NavbarComponent/>
         <div class="container w-50">
             <FormularioRegistro userAdd={userAdd} usuarioEditado={usuarioEditado} setUsuarioEditado={setUsuarioEditado} userEdit={userEdit} />
             <TablaRegistro usuarios={user} deleteUser={userDelete} setUsuarioEditado={setUsuarioEditado} />
         </div>
-
+        <FooterComponent/>
+        </div>
     );
 };
 

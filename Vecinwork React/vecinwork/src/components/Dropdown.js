@@ -17,8 +17,8 @@ const DropdownComponent = ({ infoBoton, handleOnClick }) => {
       </button>
       <ul class="dropdown-menu">
         <li>
-          <a class="dropdown-item" href="#">
-            Action
+          <a class="dropdown-item" href="http://localhost:3000/Registro">
+            Registro
           </a>
         </li>
         <li>
