@@ -4,10 +4,10 @@ import { NavbarComponent, PrincipalComponent, FooterComponent, DropdownComponent
 
 const Homepage = () => {
     const navigate = useNavigate();
-    const handleOnClick = useCallback(()=> navigate("/Usuario",{}, [navigate]))
+    const handleOnClick = useCallback(()=> navigate("",{}, [navigate]))
     return(
         <div>
-            <NavbarComponent/><DropdownComponent infoBoton={'Ir a login'} handleOnClick={handleOnClick}/>
+            <NavbarComponent/>
             <PrincipalComponent/>
             <FooterComponent/>
             

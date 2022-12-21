@@ -1,11 +1,12 @@
 import React from "react";
 import "./css/style.css";
 import Group12 from "./img/Group12.png";
+import { Link } from "react-router-dom";
 
 const NavbarComponent = () => {
   return (
     <nav class="navbar navbar-expand-lg navbar-dark bd-navbar sticky-top ">
-      <div id="BotonesNabvar" class=" container-xxl">
+      <div id="BotonesNabvar" class=" container-xs">
         <div>
         <button type="button" class="btn "><div class="letra">Santiago</div></button>
         </div>
@@ -46,6 +47,14 @@ const NavbarComponent = () => {
                   <a class="dropdown-item" href="#">
                     Carpinteria
                   </a>
+                </li>
+                <li>
+                <Link className="dropdown-item" to="/Publicacion">
+                    Electrónico
+                    <li id="lavadora">
+                    Lavadoras
+                </li>
+                  </Link>
                 </li>
               </ul>
             </li>
@@ -95,21 +104,24 @@ const NavbarComponent = () => {
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="#">
+                <Link className="dropdown-item" to="/Iniciar-Sesion">
                     Mi cuenta
-                  </a>
+                </Link>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <Link className="dropdown-item" to="/Registro">
                     Registro
-                  </a>
+                    </Link>
                 </li>
                 </ul>
-
-              </li>
-              <li><a class="navbar-brand" href="#">
+                </li>
+                <div class="container" id="containerLogo">
+              <li>
+                <Link className="navbar-brand" to="/">
                 <img src={Group12} alt="Logo"  class="d-inline-block align-text-top"/>
-              </a></li>
+                  </Link>
+                </li>
+                </div>
               </ul>
               </div>
       </div>
