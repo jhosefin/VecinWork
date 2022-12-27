@@ -6,6 +6,7 @@ import Publicar from "../components/Publicar";
 import Direcciones from "../components/Direcciones";
 import EliminarCuenta from "../components/EliminarCuenta";
 import Contraseña from "../components/Contraseña";
+
 const InicioSesionPage = () => {
 
     return (
@@ -19,7 +20,8 @@ const InicioSesionPage = () => {
         {/*<EliminarCuenta/>*/}
         {/*<Contraseña/>*/}
         <FooterComponent/>
-    
+
+     
         </div>
     )
 }
