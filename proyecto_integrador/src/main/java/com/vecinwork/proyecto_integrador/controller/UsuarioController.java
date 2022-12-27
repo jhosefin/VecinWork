@@ -28,31 +28,35 @@ public class UsuarioController {
     }
 
 
+    @PostMapping("/usuario")
+    public Usuario newUsuario(@RequestBody Usuario usuario){
+        return usuarioService.save(usuario);
+    }
+
     @GetMapping("/usuario/{id}")
     public Usuario getUsuario(@PathVariable Integer id){
         return usuarioService.getUsuario(id);
     }
 
-    @PostMapping("/usuario")
-    public Usuario newUsuario(@RequestBody Usuario usuario){
-        return usuarioService.save(usuario);
-    }
+    
 
     @PutMapping("/usuario")
     public Usuario updateUsuario(@RequestBody Usuario usuario){
         return usuarioService.save(usuario);
     }
 
-    @DeleteMapping("/deleteUsuario/{id}")
-    public void deleteUsuario(@PathVariable Integer id){
-
-        usuarioService.delete(id);
-    }
+    
 
     @RequestMapping("/allUser")
     public List<Usuario> getAllUsers(){
         List<Usuario> listaUser = usuarioService.getAllUsers();
         return listaUser;
+    }
+
+    @DeleteMapping("/deleteUsuario/{id}")
+    public void deleteUsuario(@PathVariable Integer id){
+
+        usuarioService.delete(id);
     }
     
 }
