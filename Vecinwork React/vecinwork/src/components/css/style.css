@@ -8,6 +8,7 @@
     margin-bottom: 0px;
     padding-top: 20px;
     border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 /* .container{
     aspect-ratio:16/9;
@@ -40,10 +41,7 @@ padding-top: 20px;
     background-color: #F19F23;
 }
 
-.btn{
-    background-color: white;
 
-}
 .letra{
     color: #F19F23;
 }
@@ -54,16 +52,21 @@ padding-top: 20px;
 /* estilos del navbar */
 .navbar{
     background-color: #F19F23;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 #service-search-form{
     width: 30rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 7px;
+    margin-bottom: -10px;
 }
-
+    
 #BotonesNabvar{
-    display: flex;
-    justify-content: space-between;
+    display:flex;
+    justify-content:space-between;
     background-color: #F19F23;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -78,6 +81,11 @@ padding-top: 20px;
     justify-content: flex-end;
     margin-top: -55px;
     margin-right: 10px;
+}
+#BotonMaps{
+    background: white;
+    border-radius: 10px;
+
 }
 
 /* estilos del chat */
@@ -150,6 +158,7 @@ small {
     float: left;
     margin-top: 10px;
     margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
     
 }
 
@@ -161,6 +170,7 @@ small {
     margin-top: 10px;
     margin-bottom: 10px;
     text-align:justify;
+    font-family: Arial, Helvetica, sans-serif;
     
 }
 
@@ -200,6 +210,7 @@ small {
 
 #tituloBienvenida{
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #containerIngresoUsuario{
@@ -223,10 +234,12 @@ small {
     margin-top: 20px;
     font-size: small;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #tituloSinCuenta{
     font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #botonIngresoUsuario{
@@ -266,20 +279,24 @@ a{
 
 #tituloTerminosCondiciones{
     font-size: smaller;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #tituloIniciarSesion{
     font-size: smaller;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #containerFormularioRegistro{
     border-style: solid;
     border-width: 1px;
     border-radius: 15px;
+    
 }
 
 #botonRegistrate{
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Estilo de las tarjetas */
@@ -364,7 +381,8 @@ a{
 /*estilo de la lista de publicaciones en categorias*/
 #publicacionesCategoria {
     margin-top: 80px;
-    ;
+    font-family: Arial, Helvetica, sans-serif;
+    
 
 }
 
@@ -372,12 +390,14 @@ a{
 
     font-size: 25px;
     text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #titulodestacadas {
 
     font-size: 30px;
     margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
     
 }
 
@@ -409,6 +429,7 @@ height: auto;
 float: right;
 margin-top: 10px;
 margin-bottom: 100px;
+font-family: Arial, Helvetica, sans-serif;
 
 }
 .container#galeriaPublicacion2{
@@ -418,6 +439,7 @@ margin-bottom: 100px;
     float: left;
     margin-top: 10px;
     margin-bottom: 100px;
+    font-family: Arial, Helvetica, sans-serif;
     
     }
 
@@ -438,6 +460,7 @@ margin-bottom: 100px;
     margin-left: auto;
     margin-right: auto;
     text-align:justify;
+    font-family: Arial, Helvetica, sans-serif;
     
 }
 
@@ -447,6 +470,7 @@ margin-bottom: 100px;
     display: flex;
     height: 100%;
     width: 500px;
+    font-family: Arial, Helvetica, sans-serif;
     
 }
 
@@ -465,3 +489,50 @@ margin-bottom: 100px;
     margin-top: 45px;
     
 }
+<<<<<<< HEAD
+=======
+
+/* Estilos de conocenos */
+.ImagenConocenos{
+    margin: 200px;
+    margin-top: -50px;
+}
+
+.conocenos{
+    text-align: center;
+    margin-top: 50px;
+}
+.subtitulo{
+    margin-top:-250px;
+}
+
+.parrafo{
+    margin-right: 600px;
+    margin-left: 10px;
+}
+.ImagenConocenos2{
+    margin-top: -200px;
+    margin-left: 700px;
+}
+.vision{
+    margin-right: 600px;
+    margin-left: 10px;
+}
+.mision{
+    margin-top: -120px;
+    margin-left: 700px;
+}
+.Imagenpersonas{
+    margin-left: 60px;
+}
+#botonContactanos{
+    margin-left: 600px;
+    margin-top: -60px;
+}
+/* Publicar.js (componente)*/
+
+#span{
+    font-size: x-small;
+    font-weight: 200;
+}
+>>>>>>> 225a1aef525f7fe1f15cd396b05dec1d98cf34a0

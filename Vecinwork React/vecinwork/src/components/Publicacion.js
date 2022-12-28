@@ -78,7 +78,7 @@ const Publicacion = () => {
     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body">            
               Realizo reparación de diferentes tipos y marcas de artefactos
-              eléctricos.<code> Experiencia de 10 años</code>, especialista en lavadoras y
+              eléctricos.<strong id="diez"> Experiencia de 10 años</strong>, especialista en lavadoras y
               refrigeradores. Incluye garantía de 6 meses.</div>
     </div>
   </div>
