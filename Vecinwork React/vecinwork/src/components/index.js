@@ -10,6 +10,8 @@ import FormularioRegistro from "./FormularioRegistro";
 import ConocenosComponent from "./Conocenos";
 import NavMisDatos from "./NavMisDatos";
 import MisDatos from "./MisDatos";
-
+import Publicar from "./Publicar";
 
 export {PrincipalComponent, NavbarComponent, ChatComponent, FooterComponent, ListaPublicaciones, Publicacion, IngresoUsuario, FormularioRegistro, TablaRegistro, ConocenosComponent, NavMisDatos, MisDatos};
+
+
