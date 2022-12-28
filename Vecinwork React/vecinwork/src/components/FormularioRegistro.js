@@ -55,7 +55,7 @@ const FormularioRegistro = ({ userAdd, usuarioEditado, setUsuarioEditado, userEd
     return (
         <div class="container mt-md-5 mb-md-5" id="containerFormularioRegistro">
             <form class="ms-md-3 me-md-3">
-                {usuarioEditado !== null ? <h1>Editar usuario</h1> : <h1>Ingrese usuario</h1>}
+                
                 <div class="mb-3">
                     <h3 class="d-md-flex justify-content-md-center mt-md-4 mb-md-4 fs-2">Regístrate</h3>
                     <h4 class="fs-5 mb-md-4">Datos Básicos</h4>

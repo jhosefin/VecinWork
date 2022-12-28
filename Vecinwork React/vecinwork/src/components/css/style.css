@@ -41,10 +41,7 @@ padding-top: 20px;
     background-color: #F19F23;
 }
 
-.btn{
-    background-color: white;
 
-}
 .letra{
     color: #F19F23;
 }
@@ -66,8 +63,8 @@ padding-top: 20px;
 }
     
 #BotonesNabvar{
-    display: flex;
-    justify-content: space-between;
+    display:flex;
+    justify-content:space-between;
     background-color: #F19F23;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -84,6 +81,11 @@ padding-top: 20px;
     justify-content: flex-end;
     margin-top: -55px;
     margin-right: 10px;
+}
+#BotonMaps{
+    background: white;
+    border-radius: 10px;
+
 }
 
 /* estilos del chat */
@@ -488,10 +490,6 @@ font-family: Arial, Helvetica, sans-serif;
     
 }
 
-.accordion-item{
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 /* Estilos de conocenos */
 .ImagenConocenos{
     margin: 200px;
@@ -535,4 +533,3 @@ font-family: Arial, Helvetica, sans-serif;
     font-size: x-small;
     font-weight: 200;
 }
-

@@ -2,12 +2,16 @@ import PrincipalComponent from "./Principal";
 import NavbarComponent from "./Navbar";
 import ChatComponent from "./Chat";
 import FooterComponent from "./Footer";
-import DropdownComponent from "./Dropdown";
 import ListaPublicaciones from "./ListaPublicaciones";
 import Publicacion from "./Publicacion";
 import IngresoUsuario from "./IngresoUsuario";
 import TablaRegistro from "./TablaRegistro";
 import FormularioRegistro from "./FormularioRegistro";
+import ConocenosComponent from "./Conocenos";
+import NavMisDatos from "./NavMisDatos";
+import MisDatos from "./MisDatos";
+import Publicar from "./Publicar";
+
+export {PrincipalComponent, NavbarComponent, ChatComponent, FooterComponent, ListaPublicaciones, Publicacion, IngresoUsuario, FormularioRegistro, TablaRegistro, ConocenosComponent, NavMisDatos, MisDatos};
 
 
-export {PrincipalComponent, NavbarComponent, ChatComponent, FooterComponent, DropdownComponent, ListaPublicaciones, Publicacion, IngresoUsuario, FormularioRegistro, TablaRegistro};
