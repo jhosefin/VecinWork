@@ -91,10 +91,10 @@ const Usuario = () => {
     return (
         <div>
         <NavbarComponent/>
-        <div class="container w-50">
+        
             <FormularioRegistro userAdd={userAdd} usuarioEditado={usuarioEditado} setUsuarioEditado={setUsuarioEditado} userEdit={userEdit} />
-            <TablaRegistro usuarios={user} deleteUser={userDelete} setUsuarioEditado={setUsuarioEditado} />
-        </div>
+            
+        
         <FooterComponent/>
         </div>
     );
