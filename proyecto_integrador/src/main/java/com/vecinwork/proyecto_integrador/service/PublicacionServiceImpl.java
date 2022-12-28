@@ -14,7 +14,7 @@ import com.vecinwork.proyecto_integrador.repository.PublicacionRepository;
 @Service
 @Transactional
 public class PublicacionServiceImpl implements PublicacionService{
-
+    
     @Autowired
     private PublicacionRepository publicacionRepository;
 
@@ -47,5 +47,7 @@ public class PublicacionServiceImpl implements PublicacionService{
     public void delete(Integer publicacion_id){
         publicacionRepository.deleteById(publicacion_id);
     }
+
+}
 
 }

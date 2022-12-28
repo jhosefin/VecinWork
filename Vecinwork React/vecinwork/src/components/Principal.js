@@ -9,7 +9,7 @@ import Group10 from "./img/Group10.png";
 
 const PrincipalComponent = () => {
   return (
-    <div class="container-fluid">
+    <div class="container-xxs">
       <div
         id="carouselExampleIndicators"
         class="carousel slide"
@@ -68,6 +68,11 @@ const PrincipalComponent = () => {
         </button>
       </div>
       <br   />
+      <div class="container-sm">
+        <h3>Encuentra en tu comunidad o alrededores lo que necesites</h3>
+        <h2 style={{color:'#F19F23'}}>Fácil y Rápido.</h2>
+      </div>
+      <br />
       <div class="tarjetas">
         <br />
       <div class="card row align-items-start" style={{width: '18rem'}}>

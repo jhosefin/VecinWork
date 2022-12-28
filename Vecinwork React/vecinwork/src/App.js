@@ -17,7 +17,7 @@ const App = () =>{
         <Route path='/Conocenos' element={<Conocenospage/>} />
         <Route path='/Chat' element={<ChatUsuariopage/>} />
         <Route path='/Destacados' element={<CategoriasDestacadasPage/>} />
-
+        
         <Route path='/Registro' element={<Usuario/>}/>
         <Route path='/IngresoUsuario' element={<IngresoUsuario/>}/>
 

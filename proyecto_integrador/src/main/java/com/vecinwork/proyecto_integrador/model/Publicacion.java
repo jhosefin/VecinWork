@@ -133,6 +133,4 @@ public class Publicacion {
         this.solicitud = solicitud;
     }
 
-
-    
 }

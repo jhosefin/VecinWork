@@ -73,7 +73,7 @@ const Publicar = ({ postAdd, postEditado, setPostEditado, postEdit }) => {
                         <label class="mt-md-4">Descripción &nbsp;&nbsp;<p></p> </label>
                         <label id="span" class="form-text">Máximo 1000 caracteres</label>
                         <textarea
-
+                            
                             class="form-control"
                             name="descripcion"
                             value={descripcion}

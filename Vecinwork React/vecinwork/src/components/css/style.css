@@ -63,7 +63,9 @@ padding-top: 20px;
 #BotonesNabvar{
     display: flex;
     justify-content: space-between;
+    background-color: #F19F23;
 }
+
 
 #lavadora{
     color: #F19F23;
@@ -74,6 +76,8 @@ padding-top: 20px;
     float: right;
     display: flex;
     justify-content: flex-end;
+    margin-top: -55px;
+    margin-right: 10px;
 }
 
 /* estilos del chat */
