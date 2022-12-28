@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Homepage, Conocenospage, ChatUsuariopage, CategoriasDestacadasPage, PublicacionPage, Usuario, InicioSesionPage} from './pages';
-
+import { Homepage, Conocenospage, ChatUsuariopage, CategoriasDestacadasPage, PublicacionPage, Usuario, InicioSesionPage,PerfilPage} from './pages';
 
 const App = () =>{
     return(
@@ -17,7 +16,7 @@ const App = () =>{
         <Route path='/Publicacion' element={<PublicacionPage/>} />
         <Route path='/Registro' element={<Usuario/>}/>
         <Route path='/Iniciar-Sesion' element={<InicioSesionPage/>}/>
-      
+        <Route path='/Perfil' element={<PerfilPage/>}/>
       </Routes>
       </BrowserRouter>
     )
