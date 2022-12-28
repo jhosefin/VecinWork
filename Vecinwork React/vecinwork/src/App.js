@@ -1,6 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { IngresoUsuario } from './components';
+import Publicar from './components/Publicar';
 import { Homepage, Conocenospage, ChatUsuariopage, CategoriasDestacadasPage, PublicacionPage, Usuario, InicioSesionPage} from './pages';
+import PublicarPage from './pages/Publicar';
 
 
 const App = () =>{
@@ -14,10 +17,15 @@ const App = () =>{
         <Route path='/Conocenos' element={<Conocenospage/>} />
         <Route path='/Chat' element={<ChatUsuariopage/>} />
         <Route path='/Destacados' element={<CategoriasDestacadasPage/>} />
-        <Route path='/Publicacion' element={<PublicacionPage/>} />
+        
         <Route path='/Registro' element={<Usuario/>}/>
-        <Route path='/Iniciar-Sesion' element={<InicioSesionPage/>}/>
-      
+        <Route path='/IngresoUsuario' element={<IngresoUsuario/>}/>
+
+
+        <Route path='/Publicacion' element={<PublicacionPage/>} />
+        <Route path='/Publicar' element={<PublicarPage/>}/>
+
+
       </Routes>
       </BrowserRouter>
     )
