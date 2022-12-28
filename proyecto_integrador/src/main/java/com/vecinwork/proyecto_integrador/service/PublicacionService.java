@@ -1,22 +1,40 @@
 package com.vecinwork.proyecto_integrador.service;
 
+
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.vecinwork.proyecto_integrador.model.Publicacion;
+import com.vecinwork.proyecto_integrador.repository.PublicacionRepository;
+
 
 @Service
 @Transactional
-public interface PublicacionService {
+public class PublicacionService {
 
-    Publicacion getPost(Integer publicacion_id);
+    private PublicacionRepository publicacionRepository;
 
-    Publicacion save(Publicacion user);
+    public PublicacionService(PublicacionRepository publicacionRepository){
+        this.publicacionRepository = publicacionRepository;
+    }
 
-    void delete(Integer publicacion_id);
+    public void savePublicacion(Publicacion publicacion){
+        publicacionRepository.save(publicacion); 
+    }
 
-    List<Publicacion> getAllPost();
+    public void updatePublicacion(Publicacion publicacion){
+        publicacionRepository.save(publicacion);
+    }
+
+    public List<Publicacion> findAll(){
+        return publicacionRepository.findAll();
+    } 
+
+    public void eliminarPublicacion(Integer id){
+        publicacionRepository.deleteById(id);
+    }
+
 
 }

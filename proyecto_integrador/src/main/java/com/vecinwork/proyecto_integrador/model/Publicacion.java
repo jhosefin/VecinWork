@@ -3,134 +3,144 @@ package com.vecinwork.proyecto_integrador.model;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
-import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity(name = "publicacion")
 public class Publicacion {
+    
+@Id
+@GeneratedValue
 
-    @Id
-    @GeneratedValue
+private int publicacion_id;
+private String titulo;
+private int precio;
+private String descripcion;
+private boolean activo;
+private Date fecha;
 
-    private int publicacion_id;
-    private String titulo;
-    private String categoria;
-    @Column(length = 1000)
-    private String descripcion;
-    private int precio;
-    private boolean activo;
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date fecha;
+@ManyToOne(fetch = FetchType.LAZY)
+@JoinColumn(name = "usuario_id")
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "usuario_id")
+private Usuario usuario; 
 
-    private Usuario usuario;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "servicios_id")
+@ManyToOne(fetch = FetchType.LAZY)
+@JoinColumn(name = "servicios_id")
 
-    private Servicios servicios;
+private Servicios servicios;
 
-    @OneToMany(mappedBy = "publicacion", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Solicitud> solicitud;
+@OneToMany(mappedBy = "publicacion", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+private List<Solicitud> solicitud;
 
-    public Publicacion() {
-    }
+public Publicacion() {
+}
 
-    public Publicacion(int publicacion_id, String titulo, int precio, String descripcion, boolean activo, Date fecha,
-            Usuario usuario, String categoria, Servicios servicios, List<Solicitud> solicitud) {
-        this.publicacion_id = publicacion_id;
-        this.titulo = titulo;
-        this.precio = precio;
-        this.descripcion = descripcion;
-        this.activo = activo;
-        this.fecha = fecha;
-        this.usuario = usuario;
-        this.servicios = servicios;
-        this.solicitud = solicitud;
-        this.categoria = categoria;
-    }
 
-    public int getPublicacion_id() {
-        return publicacion_id;
-    }
 
-    public void setPublicacion_id(int publicacion_id) {
-        this.publicacion_id = publicacion_id;
-    }
+public Publicacion(int publicacion_id, String titulo, int precio, String descripcion, boolean activo, Date fecha,
+        Usuario usuario, Servicios servicios, List<Solicitud> solicitud) {
+    this.publicacion_id = publicacion_id;
+    this.titulo = titulo;
+    this.precio = precio;
+    this.descripcion = descripcion;
+    this.activo = activo;
+    this.fecha = fecha;
+    this.usuario = usuario;
+    this.servicios = servicios;
+    this.solicitud = solicitud;
+}
 
-    public String getTitulo() {
-        return titulo;
-    }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
+public int getPublicacion_id() {
+    return publicacion_id;
+}
 
-    public int getPrecio() {
-        return precio;
-    }
+public void setPublicacion_id(int publicacion_id) {
+    this.publicacion_id = publicacion_id;
+}
 
-    public void setPrecio(int precio) {
-        this.precio = precio;
-    }
+public String getTitulo() {
+    return titulo;
+}
 
-    public String getDescripcion() {
-        return descripcion;
-    }
+public void setTitulo(String titulo) {
+    this.titulo = titulo;
+}
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
+public int getPrecio() {
+    return precio;
+}
 
-    public String getCategoria() {
-        return categoria;
-    }
+public void setPrecio(int precio) {
+    this.precio = precio;
+}
 
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
+public String getDescripcion() {
+    return descripcion;
+}
 
-    public boolean isActivo() {
-        return activo;
-    }
+public void setDescripcion(String descripcion) {
+    this.descripcion = descripcion;
+}
 
-    public void setActivo(boolean activo) {
-        this.activo = activo;
-    }
+public boolean isActivo() {
+    return activo;
+}
 
-    public Date getFecha() {
-        return fecha;
-    }
+public void setActivo(boolean activo) {
+    this.activo = activo;
+}
 
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
-    }
+public Date getFecha() {
+    return fecha;
+}
 
-    public Usuario getUsuario() {
-        return usuario;
-    }
+public void setFecha(Date fecha) {
+    this.fecha = fecha;
+}
 
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
+public Usuario getUsuario() {
+    return usuario;
+}
 
-    public Servicios getServicios() {
-        return servicios;
-    }
+public void setUsuario(Usuario usuario) {
+    this.usuario = usuario;
+}
 
-    public void setServicios(Servicios servicios) {
-        this.servicios = servicios;
-    }
+public Servicios getServicios() {
+    return servicios;
+}
 
-    public List<Solicitud> getSolicitud() {
-        return solicitud;
-    }
+public void setServicios(Servicios servicios) {
+    this.servicios = servicios;
+}
 
-    public void setSolicitud(List<Solicitud> solicitud) {
-        this.solicitud = solicitud;
-    }
 
+
+public List<Solicitud> getSolicitud() {
+    return solicitud;
+}
+
+
+
+public void setSolicitud(List<Solicitud> solicitud) {
+    this.solicitud = solicitud;
+}
+
+
+
+
+
+
+
+
+    
 }

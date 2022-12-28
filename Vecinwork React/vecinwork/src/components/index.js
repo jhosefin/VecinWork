@@ -8,6 +8,6 @@ import Publicacion from "./Publicacion";
 import IngresoUsuario from "./IngresoUsuario";
 import TablaRegistro from "./TablaRegistro";
 import FormularioRegistro from "./FormularioRegistro";
-import Publicar from "./Publicar";
 
-export {PrincipalComponent, NavbarComponent, ChatComponent, FooterComponent, DropdownComponent, ListaPublicaciones, Publicacion, IngresoUsuario, FormularioRegistro, TablaRegistro, Publicar};
+
+export {PrincipalComponent, NavbarComponent, ChatComponent, FooterComponent, DropdownComponent, ListaPublicaciones, Publicacion, IngresoUsuario, FormularioRegistro, TablaRegistro};
