@@ -61,8 +61,10 @@ padding-top: 20px;
 #service-search-form{
     width: 30rem;
     font-family: Arial, Helvetica, sans-serif;
+    margin-top: 7px;
+    margin-bottom: -10px;
 }
-
+    
 #BotonesNabvar{
     display: flex;
     justify-content: space-between;
@@ -488,5 +490,49 @@ font-family: Arial, Helvetica, sans-serif;
 
 .accordion-item{
     font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilos de conocenos */
+.ImagenConocenos{
+    margin: 200px;
+    margin-top: -50px;
+}
+
+.conocenos{
+    text-align: center;
+    margin-top: 50px;
+}
+.subtitulo{
+    margin-top:-250px;
+}
+
+.parrafo{
+    margin-right: 600px;
+    margin-left: 10px;
+}
+.ImagenConocenos2{
+    margin-top: -200px;
+    margin-left: 700px;
+}
+.vision{
+    margin-right: 600px;
+    margin-left: 10px;
+}
+.mision{
+    margin-top: -120px;
+    margin-left: 700px;
+}
+.Imagenpersonas{
+    margin-left: 60px;
+}
+#botonContactanos{
+    margin-left: 600px;
+    margin-top: -60px;
+}
+/* Publicar.js (componente)*/
+
+#span{
+    font-size: x-small;
+    font-weight: 200;
 }
 
