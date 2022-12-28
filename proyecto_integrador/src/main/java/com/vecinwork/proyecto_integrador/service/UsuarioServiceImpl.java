@@ -3,12 +3,15 @@ package com.vecinwork.proyecto_integrador.service;
 import java.util.List;
 import java.util.Optional;
 
+import javax.transaction.Transactional;
+
 import org.springframework.stereotype.Service;
 
 import com.vecinwork.proyecto_integrador.model.Usuario;
 import com.vecinwork.proyecto_integrador.repository.UsuarioRepository;
 
 @Service
+@Transactional
 public class UsuarioServiceImpl implements UsuarioService{
     
     private UsuarioRepository usuarioRepository;

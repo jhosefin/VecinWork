@@ -40,10 +40,7 @@ padding-top: 20px;
     background-color: #F19F23;
 }
 
-.btn{
-    background-color: white;
 
-}
 .letra{
     color: #F19F23;
 }
@@ -54,15 +51,16 @@ padding-top: 20px;
 /* estilos del navbar */
 .navbar{
     background-color: #F19F23;
-
 }
 #service-search-form{
     width: 30rem;
+    margin-top: 7px;
+    margin-bottom: -10px;
 }
 
 #BotonesNabvar{
-    display: flex;
-    justify-content: space-between;
+    display:flex;
+    justify-content:space-between;
     background-color: #F19F23;
 }
 
@@ -78,6 +76,11 @@ padding-top: 20px;
     justify-content: flex-end;
     margin-top: -55px;
     margin-right: 10px;
+}
+#BotonMaps{
+    background: white;
+    border-radius: 10px;
+
 }
 
 /* estilos del chat */
@@ -464,4 +467,48 @@ margin-bottom: 100px;
     margin-bottom: 5px;
     margin-top: 45px;
     
+}
+
+/* Estilos de conocenos */
+.ImagenConocenos{
+    margin: 200px;
+    margin-top: -50px;
+}
+
+.conocenos{
+    text-align: center;
+    margin-top: 50px;
+}
+.subtitulo{
+    margin-top:-250px;
+}
+
+.parrafo{
+    margin-right: 600px;
+    margin-left: 10px;
+}
+.ImagenConocenos2{
+    margin-top: -200px;
+    margin-left: 700px;
+}
+.vision{
+    margin-right: 600px;
+    margin-left: 10px;
+}
+.mision{
+    margin-top: -120px;
+    margin-left: 700px;
+}
+.Imagenpersonas{
+    margin-left: 60px;
+}
+#botonContactanos{
+    margin-left: 600px;
+    margin-top: -60px;
+}
+/* Publicar.js (componente)*/
+
+#span{
+    font-size: x-small;
+    font-weight: 200;
 }
