@@ -1,7 +1,7 @@
-import React, {useState,useEffect,useCallback} from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { FormularioRegistro, TablaRegistro, FooterComponent, NavbarComponent } from "../components";
-import {addUser,editUser,getAllUsers,deleteUser} from '../services/User';
+import { addUser, editUser, getAllUsers, deleteUser } from '../services/User';
 
 
 const usuario = [
@@ -75,7 +75,7 @@ const Usuario = () => {
         const usuarioBD = await addUser(usuarioAgregado);
         //aqui haremos que la tabla se actualice
         window.location.href = "/Destacados";
-  /*       getUsers(); */
+        /*       getUsers(); */
     }
 
     const userEdit = async (usuarioEditado) => {
@@ -90,14 +90,13 @@ const Usuario = () => {
 
     return (
         <div>
-        <NavbarComponent/>
-        
+            <NavbarComponent />
+
             <FormularioRegistro userAdd={userAdd} usuarioEditado={usuarioEditado} setUsuarioEditado={setUsuarioEditado} userEdit={userEdit} />
             
-        
-        <FooterComponent/>
+            <FooterComponent />
         </div>
     );
-};
+}
 
 export default Usuario;

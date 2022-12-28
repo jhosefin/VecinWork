@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { IngresoUsuario } from './components';
 import Publicar from './components/Publicar';
 import { Homepage, Conocenospage, ChatUsuariopage, CategoriasDestacadasPage, PublicacionPage, Usuario, InicioSesionPage} from './pages';
-import PublicarPage from './pages/Publicar';
+import PublicarPage from './pages/PublicarPage';
 
 
 const App = () =>{
@@ -28,7 +28,7 @@ const App = () =>{
 
       </Routes>
       </BrowserRouter>
-    )
-  }
-  
+    );
+};
+
   export default App;
