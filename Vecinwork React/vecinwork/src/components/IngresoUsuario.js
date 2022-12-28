@@ -12,7 +12,7 @@ const IngresoUsuario = () => {
                 <img src={logoVecinwork} alt="LOGO VECINWORK" class="mt-md-4"></img>
             </div>
             <div>
-                <h2 class="mt-md-4 d-md-flex justify-content-md-center" id="tituloBienvenida">¡Te damos la bienvenida!</h2>
+                <h2 class="mt-md-4" id="tituloBienvenida">¡Te damos la bienvenida!</h2>
 
                 <form>
                     <div class="mb-3 ms-md-3 me-md-4">

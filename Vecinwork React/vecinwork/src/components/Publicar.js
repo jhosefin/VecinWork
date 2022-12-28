@@ -1,129 +1,58 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-const PublicacionInicial = {
-    publicacion_id: "",
-    titulo: "",
-    categoria: "",
-    descripcion: "",
-    precio: "",
-    activo: "",
-    fecha: ""
-}
+const Publicar = () => {
+    return(
+        <div class="container mt-md-5 " id="containerPublicación">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="btn-group-horizontal col-7" role="group"> {/*Izq*/}
+                                    <div> {/*Nombre que esta sobre las elecciones de trabajo */}
+                                                    <label for="firstname">Tipo de Trabajo</label>
+                                                    <div>{/*Menú de selección*/}
+                                                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                                        <option selected>Carpintería</option>
+                                                        <option value="1">Cuidado de niños</option>
+                                                        <option value="2">Jardineria</option>
+                                                        <option value="3">Desarrollador</option>
+                                                        </select>
+                                                    </div>
+                                    </div>
+                                                    <div class="mb-3">{/* Caja para describir trabajo */}
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                    </div> 
+                                                    
+                                </div>
 
-const Publicar = ({ postAdd, postEditado, setPostEditado, postEdit }) => {
+                                    <div>
 
-    const [publicacion, setPublicacion] = useState(PublicacionInicial);
-    const { publicacion_id, titulo, categoria, descripcion, precio, activo, fecha } = publicacion;
-
-    useEffect(() => {
-        if (postEditado !== null) {
-            setPublicacion(postEditado);
-        } else {
-            setPublicacion({
-                publicacion_id: "",
-                titulo: "",
-                categoria: "",
-                descripcion: "",
-                precio: "",
-                activo: "",
-                fecha: ""
-            });
-        };
-    }, [postEditado])
-
-    const handleInputChange = (e) => {
-        const changedFormValue = {
-            ...publicacion,
-            [e.target.name]: e.target.value,
-        }
-        setPublicacion(changedFormValue);
-    }
-
-    return (
-        <form>
-            <div class="container">
-
-<h3 class="mt-md-4 d-flex justify-content-center"> Crea tu publicación </h3>
-                <div class="row">
-
-
-                    <input
-                        type="text"
-                        class="form-control"
-                        name="publicacion_id"
-                        value={publicacion_id}
-                        onChange={handleInputChange}
-                        disabled
-                        hidden />
-
-                    <div class="col">
-                        <label class="mt-md-2">Título &nbsp;&nbsp;</label>
-                        <label id="span" class="form-text">Máximo 50 caracteres</label>
-                        <input
-                            type="text"
-                            class="form-control mt-md-2"
-                            name="titulo"
-                            value={titulo}
-                            onChange={handleInputChange} />
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <label class="mt-md-4">Descripción &nbsp;&nbsp;<p></p> </label>
-                        <label id="span" class="form-text">Máximo 1000 caracteres</label>
-                        <textarea
-                            
-                            class="form-control"
-                            name="descripcion"
-                            value={descripcion}
-                            onChange={handleInputChange} />
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <label class="mt-md-4">Precio</label>
-                        <input
-                            type="text"
-                            class="form-control mt-md-2"
-                            name="precio"
-                            value={precio}
-                            onChange={handleInputChange} />
-                    </div>
-                    <div class="col">
-                        <label class="mt-md-4">Categoría</label>
-                        <input
-                            type="text"
-                            class="form-control mt-md-2"
-                            name="categoria"
-                            value={categoria}
-                            onChange={handleInputChange} />
-
-                    </div>
-                    <div class="col">
-                        <label class="mt-md-4">Fecha</label>
-                        <input
-                            type="date"
-                            class="form-control mt-md-2"
-                            name="fecha"
-                            value={fecha}
-                            onChange={handleInputChange} />
-                    </div>
-                </div>
-
-                <div>
-                    <button
-                        type="button"
-                        class="btn btn-success mt-md-4"
-                        onClick={() => postAdd(publicacion)}
-                    >
-                        Ingresar publicacion
-                    </button>
-                </div>
-
-            </div>
-        </form>
+                                    </div>
+                                     
+                                        <div class="col-sm"> {/*Insertar imagenes*/}
+                                            <div class="mb-3">{/*Cajita para seleccionar imagenes de trabajos */}
+                                                    <label for="formFile" class="form-label">Imagenes del Servicio</label>
+                                                    <input 
+                                                    class="form-control" 
+                                                    type="file" 
+                                                    id="formFile">
+                                                    </input>
+                                            </div>
+                                            <div class="mb-3">{/*Cajita para seleccionar imagenes de certificados */}
+                                                <label for="formFile" class="form-label">Certificados</label>
+                                                <input 
+                                                class="form-control" 
+                                                type="file" 
+                                                id="formFile">
+                                                </input>
+                                            </div>
+                                        </div>                   
+                            </div>
+                        </div>
+                                
+                                
+  
+        </div>
+      
     );
 };
 
