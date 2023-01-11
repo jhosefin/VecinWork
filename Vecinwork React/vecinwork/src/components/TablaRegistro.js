@@ -4,7 +4,7 @@ import React from "react";
 const TablaRegistro = ({ usuarios, deleteUser, setUsuarioEditado }) => {
   return (
     <div>
-      <table class="table">
+      <table className="table">
         <thead>
           <tr>
             <th scope="col">ID</th>
@@ -65,7 +65,7 @@ const TablaRegistro = ({ usuarios, deleteUser, setUsuarioEditado }) => {
               <td>
                 <button
                   type="button"
-                  class="btn btn-primary"
+                  className="btn btn-primary"
                   onClick={() => {
                     deleteUser(usuario.usuario_id);
                   }}
@@ -74,7 +74,7 @@ const TablaRegistro = ({ usuarios, deleteUser, setUsuarioEditado }) => {
                 </button>
                 <button
                   type="button"
-                  class="btn btn-warning"
+                  className="btn btn-warning"
                   onClick={() => {
                     setUsuarioEditado(usuario);
                   }}

@@ -6,4 +6,6 @@ import PublicacionPage from "./Publicacion";
 import Usuario from "./Usuario";
 import InicioSesionPage from "./InicioSesion";
 import PerfilPage from "./Perfil";  
-export {Homepage , Conocenospage, ChatUsuariopage, CategoriasDestacadasPage, PublicacionPage, Usuario, InicioSesionPage, PerfilPage};
+import Ubicacion from "./Ubicación";
+
+export {Homepage , Conocenospage, ChatUsuariopage, CategoriasDestacadasPage, PublicacionPage, Usuario, InicioSesionPage, PerfilPage, Ubicacion};

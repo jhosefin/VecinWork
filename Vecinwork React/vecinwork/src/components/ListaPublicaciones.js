@@ -11,27 +11,27 @@ const ListaPublicaciones = () => {
  
     return (
    
-<body class="container" id="tarjetasDestacados">
+<body className="container" id="tarjetasDestacados">
   {/* <!-- Inicio de las tarjetas --> */}
   <h3 id="titulodestacadas">Categorías destacadas</h3>
-  <div class="card" id="zoom">
+  <div className="card" id="zoom">
   <figure id="cardzoom"><img src={pasteleria} alt="Imagen de la categoría 1"/></figure>
-    <div class="card-content">
-      <h3 class="card-title">Pastelería</h3>
+    <div className="card-content">
+      <h3 className="card-title">Pastelería</h3>
       
     </div>
   </div>
-  <div class="card" id="zoom">
+  <div className="card" id="zoom">
     <figure id="cardzoom"><img src={jardineria} alt="Imagen de la categoría 2"/></figure>
-    <div class="card-content">
-      <h3 class="card-title">Jardinería</h3>
+    <div className="card-content">
+      <h3 className="card-title">Jardinería</h3>
       
     </div>
   </div>
-  <div class="card" id="zoom">
+  <div className="card" id="zoom">
     <figure id="cardzoom"><img src={electronica} alt="Imagen de la categoría 3"/></figure>
-    <div class="card-content">
-      <h3 class="card-title">Electrónica</h3>
+    <div className="card-content">
+      <h3 className="card-title">Electrónica</h3>
       
     </div>
   </div>
@@ -42,18 +42,18 @@ const ListaPublicaciones = () => {
 
   </div>
 
-  <div class="card mb-3" id="listaPublicaciones">
-  <div class="row g-0">
-    <div class="col-md-2">
-      <img class="img-fluid rounded-start" id="imgenLista" src={publi2}  alt="..."/>
+  <div className="card mb-3" id="listaPublicaciones">
+  <div className="row g-0">
+    <div className="col-md-2">
+      <img className="img-fluid rounded-start" id="imgenLista" src={publi2}  alt="..."/>
     </div>
-    <div class="col-md-10">
-      <div class="card-body" id="lista">
-        <h5 class="card-title">Reparación de lavadoras y refrigeradores</h5>
-        <p class="card-text">Realizo reparaciones de diferentes tipos y marcas de artefactos eléctricos.
+    <div className="col-md-10">
+      <div className="card-body" id="lista">
+        <h5 className="card-title">Reparación de lavadoras y refrigeradores</h5>
+        <p className="card-text">Realizo reparaciones de diferentes tipos y marcas de artefactos eléctricos.
         Experiencia de 10 años, especialista en lavadoras y refrigeradores.
         Incluye garantía de 6 meses.</p>
-        <a href="#" class="btn btn-primary" id="vermaslista">Ver más</a>
+        <a className="btn btn-primary" id="vermaslista">Ver más</a>
       </div>
     </div>
   </div>

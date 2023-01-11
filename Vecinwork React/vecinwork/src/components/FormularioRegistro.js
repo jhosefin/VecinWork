@@ -53,19 +53,19 @@ const FormularioRegistro = ({ userAdd, usuarioEditado, setUsuarioEditado, userEd
     }
 
     return (
-        <div class="container mt-md-5 mb-md-5" id="containerFormularioRegistro">
-            <form class="ms-md-3 me-md-3">
+        <div className="container mt-md-5 mb-md-5" id="containerFormularioRegistro">
+            <form className="ms-md-3 me-md-3">
                 
-                <div class="mb-3">
-                    <h3 class="d-md-flex justify-content-md-center mt-md-4 mb-md-4 fs-2">Regístrate</h3>
-                    <h4 class="fs-5 mb-md-4">Datos Básicos</h4>
+                <div className="mb-3">
+                    <h3 className="d-md-flex justify-content-md-center mt-md-4 mb-md-4 fs-2">Regístrate</h3>
+                    <h4 className="fs-5 mb-md-4">Datos Básicos</h4>
                 </div>
-                <div class="row">
-                    <div class="col">
+                <div className="row">
+                    <div className="col">
                         <input
                             type="hidden"
                             placeholder="ID"
-                            class="form-control"
+                            className="form-control"
                             id="exampleID"
                             name="usuario_id"
                             value={usuario_id}
@@ -74,13 +74,13 @@ const FormularioRegistro = ({ userAdd, usuarioEditado, setUsuarioEditado, userEd
                     </div>
 
                 </div>
-                <div class="row">
+                <div className="row">
 
-                    <div class="col">
+                    <div className="col">
                         <input
                             type="text"
                             placeholder="Nombres"
-                            class="form-control"
+                            className="form-control"
                             id="exampleInputNombres"
                             name="nombre"
                             value={nombre}
@@ -88,11 +88,11 @@ const FormularioRegistro = ({ userAdd, usuarioEditado, setUsuarioEditado, userEd
                         />
                     </div>
 
-                    <div class="col">
+                    <div className="col">
                         <input
                             type="text"
                             placeholder="Apellidos"
-                            class="form-control"
+                            className="form-control"
                             id="exampleInputApellidos"
                             name="apellidos"
                             value={apellidos}
@@ -101,13 +101,13 @@ const FormularioRegistro = ({ userAdd, usuarioEditado, setUsuarioEditado, userEd
 
                 </div>
 
-                <div class="row">
+                <div className="row">
 
-                    <div class="col">
+                    <div className="col">
                         <input
                             type="text"
                             placeholder="Fecha de nacimiento (yyyy-mm-dd)"
-                            class="form-control"
+                            className="form-control"
                             id="exampleInputFechaNacimiento"
                             name="fechaNacimiento"
                             value={fechaNacimiento}
@@ -115,11 +115,11 @@ const FormularioRegistro = ({ userAdd, usuarioEditado, setUsuarioEditado, userEd
                         />
                     </div>
 
-                    <div class="col">
+                    <div className="col">
                         <input
                             type="text"
                             placeholder="Teléfono"
-                            class="form-control"
+                            className="form-control"
                             id="exampleInputTelefono"
                             name="numTelefonico"
                             value={numTelefonico}
@@ -127,11 +127,11 @@ const FormularioRegistro = ({ userAdd, usuarioEditado, setUsuarioEditado, userEd
                         />
                     </div>
 
-                    <div class="col">
+                    <div className="col">
                         <input
                             type="email"
                             placeholder="Correo Electrónico"
-                            class="form-control"
+                            className="form-control"
                             id="exampleInputEmail"
                             name="correo"
                             value={correo}
@@ -143,13 +143,13 @@ const FormularioRegistro = ({ userAdd, usuarioEditado, setUsuarioEditado, userEd
                 </div>
 
 
-                <div class="row">
+                <div className="row">
 
-                    <div class="col">
+                    <div className="col">
                         <input
                             type="text"
                             placeholder="Región"
-                            class="form-control"
+                            className="form-control"
                             id="exampleInputRegion"
                             name="region"
                             value={region}
@@ -157,22 +157,22 @@ const FormularioRegistro = ({ userAdd, usuarioEditado, setUsuarioEditado, userEd
                         />
                     </div>
 
-                    <div class="col">
+                    <div className="col">
                         <input
                             type="text"
                             placeholder="Comuna"
-                            class="form-control"
+                            className="form-control"
                             id="exampleInputComuna"
                             name="comuna"
                             value={comuna}
                             onChange={handleInputChange} />
                     </div>
 
-                    <div class="col">
+                    <div className="col">
                         <input
                             type="text"
                             placeholder="Dirección"
-                            class="form-control"
+                            className="form-control"
                             id="exampleInputDirección"
                             name="direccion"
                             value={direccion}
@@ -182,18 +182,18 @@ const FormularioRegistro = ({ userAdd, usuarioEditado, setUsuarioEditado, userEd
 
 
 
-                <div class="row">
-                    <div class="col">
-                        <select class="form-select form-select-sm ">
+                <div className="row">
+                    <div className="col">
+                        <select className="form-select form-select-sm ">
                             <option>RUT</option>
                         </select>
                     </div>
 
-                    <div class="col">
+                    <div className="col">
                         <input
                             type="text"
                             placeholder="Número de documento"
-                            class="form-control"
+                            className="form-control"
                             id="exampleInputNumDocumento"
                             name="numDocumento"
                             value={numDocumento}
@@ -203,53 +203,53 @@ const FormularioRegistro = ({ userAdd, usuarioEditado, setUsuarioEditado, userEd
                 </div>
 
                 <div>
-                    <h3 class="fs-5 mt-md-4 mb-md-4">Privacidad</h3>
+                    <h3 className="fs-5 mt-md-4 mb-md-4">Privacidad</h3>
                 </div>
 
-                <div class="row">
+                <div className="row">
 
-                    <div class="col">
+                    <div className="col">
                         <input
                             type="password"
                             placeholder="Contraseña"
-                            class="form-control"
+                            className="form-control"
                             id="exampleInputPassword"
                             name="contrasenia"
                             value={contrasenia}
                             onChange={handleInputChange} />
                     </div>
 
-                    <div class="col"></div>
+                    <div className="col"></div>
                 </div>
 
-                <div class="row">
+                <div className="row">
 
-                    <div class="col">
+                    <div className="col">
                         <input
                             type="password"
                             placeholder="Repetir contraseña"
-                            class="form-control"
+                            className="form-control"
                             id="exampleInputPasswordRepeated"
                             name="passwordRepeated"
                             value={passwordRepeated}
                             onChange={handleInputChange} />
                     </div>
 
-                    <div class="col"></div>
+                    <div className="col"></div>
                 </div>
 
 
 
 
-                <div class="mb-3 form-check mt-md-3">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                    <label id="tituloTerminosCondiciones" class="form-check-label" for="exampleCheck1">Acepto los <a href="www.google.com">Términos y Condiciones</a></label>
+                <div className="mb-3 form-check mt-md-3">
+                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                    <label id="tituloTerminosCondiciones" className="form-check-label" for="exampleCheck1">Acepto los <a href="www.google.com">Términos y Condiciones</a></label>
                 </div>
-                <div class="d-md-flex justify-content-md-center">
+                <div className="d-md-flex justify-content-md-center">
                     {usuarioEditado !== null ? (
                         <button
                             type="button"
-                            class="btn btn-success"
+                            className="btn btn-success"
                             onClick={() => userEdit(usuario)}
                         >
                             Editar usuario
@@ -257,7 +257,7 @@ const FormularioRegistro = ({ userAdd, usuarioEditado, setUsuarioEditado, userEd
                     ) : (
                         <button
                             type="button"
-                            class="btn btn-success"
+                            className="btn btn-success"
                             onClick={() => userAdd(usuario)}
                         >
                             Ingresar usuario
@@ -266,7 +266,7 @@ const FormularioRegistro = ({ userAdd, usuarioEditado, setUsuarioEditado, userEd
                     {usuarioEditado !== null ? (
                         <button
                             type="button"
-                            class="btn btn-danger"
+                            className="btn btn-danger"
                             onClick={() => setUsuarioEditado(null)}
                         >
                             Cancelar
@@ -276,7 +276,7 @@ const FormularioRegistro = ({ userAdd, usuarioEditado, setUsuarioEditado, userEd
                     )}
                 </div>
                 <div>
-                    <h6 id="tituloIniciarSesion" class="mb-md-3">¿Ya tienes una cuenta? <a href="wwww.google.com">Iniciar sesión</a></h6>
+                    <h6 id="tituloIniciarSesion" className="mb-md-3">¿Ya tienes una cuenta? <a href="wwww.google.com">Iniciar sesión</a></h6>
                 </div>
             </form>
         </div>

@@ -3,7 +3,7 @@ import React from "react";
 
 const MisDatos =() =>{
     return(
-        <div class="container mt-md-5 row" id="containerMisDatos">
+        <div className="container mt-md-5 row" id="containerMisDatos">
            {/*Aquí se deberia rellenar automaticamente con los datos del 
            usuario, pero no cacho como hacerlo asi que chamullo jeje<3 */}
            <label for="firstname">Nombre</label>
@@ -12,7 +12,7 @@ const MisDatos =() =>{
                 usuario_id="firstname" nombre="firstname" 
                 title="Nombre" 
                 value="Constanza" 
-                class="input-text required-entry" 
+                className="input-text required-entry" 
                 data-validate="{required:true, 'tuten-letters-with-accent': true}" 
                 aria-required="true">
             </input>

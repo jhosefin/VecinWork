@@ -1,14 +1,14 @@
 import React, { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import { NavbarComponent, PrincipalComponent, FooterComponent } from "../components";
+import { Mapa, NavbarComponent, FooterComponent} from "../components";
 
-const Homepage = () => {
+const Ubicacion = () => {
     const navigate = useNavigate();
     const handleOnClick = useCallback(()=> navigate("",{}, [navigate]))
     return(
         <div>
             <NavbarComponent/>
-            <PrincipalComponent/>
+            <Mapa/>
             <FooterComponent/>
             
 
@@ -16,4 +16,4 @@ const Homepage = () => {
     )
 }
 
-export default Homepage;
+export default Ubicacion;

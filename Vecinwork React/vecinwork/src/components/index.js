@@ -11,7 +11,8 @@ import ConocenosComponent from "./Conocenos";
 import NavMisDatos from "./NavMisDatos";
 import MisDatos from "./MisDatos";
 import Publicar from "./Publicar";
+import Mapa from "./Mapa";
 
-export {PrincipalComponent, NavbarComponent, ChatComponent, FooterComponent, ListaPublicaciones, Publicacion, IngresoUsuario, FormularioRegistro, TablaRegistro, ConocenosComponent, NavMisDatos, MisDatos};
+export {PrincipalComponent, NavbarComponent, ChatComponent, FooterComponent, ListaPublicaciones, Publicacion, IngresoUsuario, FormularioRegistro, TablaRegistro, ConocenosComponent, NavMisDatos, MisDatos,Publicar, Mapa};
 
 

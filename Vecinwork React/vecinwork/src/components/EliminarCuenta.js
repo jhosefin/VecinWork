@@ -3,9 +3,9 @@ import React from "react";
 
 const EliminarCuenta =()=>{
     return(
-        <div class="container mt-md-5 " id="containerEliminarCuenta">
-  <div class="card">
-            <div class="card-body">
+        <div className="container mt-md-5 " id="containerEliminarCuenta">
+  <div className="card">
+            <div className="card-body">
                 <div>{/*Texo de eliminar tu cuenta */}
                 <h3><b>¿Quieres eliminar tu cuenta?</b></h3>
                 <div>
@@ -18,7 +18,7 @@ const EliminarCuenta =()=>{
                     En las próximas 48 horas recibirás a tu correo un e-mail de confirmación que tu cuenta ha sido dada de baja.</h5>
                 </div>
                 <div>{/*Botón Eliminar */}
-                    <button type="button" class="btn btn-primary">Eliminar</button>
+                    <button type="button" className="btn btn-primary">Eliminar</button>
                     </div>
                 </div>
 

@@ -512,3 +512,10 @@ margin-bottom: 100px;
     font-size: x-small;
     font-weight: 200;
 }
+
+/* estilos de mapa */
+#mapa{
+    margin-top: 70px;
+    margin-left: 350px;
+
+}

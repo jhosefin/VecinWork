@@ -6,58 +6,59 @@ import { Link } from "react-router-dom";
 const NavbarComponent = () => {
   return (
 
-    <div class="background">
-      <div class="new header col-md-10 position-left">
-      <nav class="navbar navbar-expand-lg navbar-dark bd-navbar sticky-top ">
+    <div className="background">
+      <div className="new header col-md-10 position-left">
+      <nav className="navbar navbar-expand-lg navbar-dark bd-navbar sticky-top ">
 
-      <div id="BotonesNabvar" class=" container-sm">
+      <div id="BotonesNabvar" className=" container-sm">
+      <div>
+              <Link type="button" className="btn" to="/Ubicacion">
+                <div className="letra">Santiago</div>
+              </Link>
+            </div>
         <div>
-        <button id="BotonMaps" type="button" class="btn "><div class="letra">Santiago</div></button>
-        </div>
-        <div>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
+        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle"
-                href="#"
+                className="nav-link dropdown-toggle"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 Servicios
               </a>
-              <ul class="dropdown-menu">
+              <ul className="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a className="dropdown-item">
                     Construccion
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a className="dropdown-item">
                     Jardineria
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a className="dropdown-item" >
                     Eventos
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a className="dropdown-item" >
                     Cuidado de personas
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a className="dropdown-item" >
                     Carpinteria
                   </a>
                 </li>
                 <li>
                 <Link className="dropdown-item" to="/Publicacion">
                     Electrónico
-                    <li id="lavadora">
+                    <div id="lavadora">
                     Lavadoras
-                </li>
+                </div>
                   </Link>
                 </li>
               </ul>
@@ -68,19 +69,19 @@ const NavbarComponent = () => {
             <div>
             <form
               id="service-search-form"
-              class="hidden-xs hidden-sm hidden-md"
+              className="hidden-xs hidden-sm hidden-md"
             >
-              <div id="search" class="search-container input-group mb-3">
+              <div id="search" className="search-container input-group mb-3">
                 <input
                   id="desktop-input"
-                  class="form-control desktop-input"
+                  className="form-control desktop-input"
                   autoComplete="off"
                   placeholder="Encuentra el servicio que necesitas aquí"
                   aria-describedby="button-addon2"
                 />
 
                   <button
-                    class="btn btn-outline-secondary"
+                    className="btn btn-outline-secondary"
                     type="button"
                     id="button-addon2"
                   >
@@ -90,15 +91,15 @@ const NavbarComponent = () => {
             </form>
             </div>
             <div>
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
+              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
             <Link className="nav-link" to="/Conocenos">
             Conocenos
                 </Link>
             </li>
-            <li class="nav-item dropdown">
+            <li className="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle"
+                className="nav-link dropdown-toggle"
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -106,7 +107,7 @@ const NavbarComponent = () => {
               >
                 Inicia sesión/Regístrate
               </a>
-              <ul class="dropdown-menu">
+              <ul className="dropdown-menu">
                 <li>
                 <Link className="dropdown-item" to="/Iniciar-Sesion">
                     Mi cuenta
@@ -124,9 +125,9 @@ const NavbarComponent = () => {
               </div>
               </nav>
               </div>
-              <div class="logo col-md-2 position-right" id="containerLogo">
+              <div className="logo col-md-2 position-right" id="containerLogo">
                 <Link className="navbar-brand" to="/">
-                <img src={Group12} alt="Logo" class="d-inline-block align-text-top"/>
+                <img src={Group12} alt="Logo" className="d-inline-block align-text-top"/>
                   </Link>
                 </div>
 
